@@ -10,7 +10,7 @@ As a library
 go get github.com/hop-/golog
 ```
 
-Usage:
+## Usage
 
 This library allows to log into file as well as to standard outputs
 
