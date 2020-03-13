@@ -38,6 +38,15 @@ func Errorf(format string, v ...interface{}) {
 func Fatal(v ...interface{}) {
 	Error(v...)
 	Error("Fatal error")
+    Close()
+	os.Exit(1)
+}
+
+// Fatalf log fatal error with format
+func Fatalf(format string, v ...interface{}) {
+    Errorf(format, v...)
+	Error("Fatal error")
+    Close()
 	os.Exit(1)
 }
 
