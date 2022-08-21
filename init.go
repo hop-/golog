@@ -77,6 +77,6 @@ func getMode(mode string) LogMode {
 	case "DEBUG":
 		return DebugMode
 	default:
-		return WarningMode
+		return InfoMode
 	}
 }
