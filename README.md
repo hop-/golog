@@ -15,11 +15,12 @@ go get github.com/hop-/golog
 This library allows to log into file as well as to standard outputs
 
 Code example:
+
 ```go
 import log "github.com/hop-/golog"
 
 func main() {
-    log.InitFile("log.txt")
+    log.InitFile("log.txt", "INFO")
 
     log.Info("This application will log everithing to log.txt as well as to standard outputs")
     log.Warning("Some warining")
