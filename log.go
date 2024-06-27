@@ -5,7 +5,7 @@ import (
 )
 
 // Debug log debug line
-func Debug(v ...interface{}) {
+func Debug(v ...any) {
 	if debugLog == nil {
 		return
 	}
@@ -13,7 +13,7 @@ func Debug(v ...interface{}) {
 }
 
 // Info log info line
-func Info(v ...interface{}) {
+func Info(v ...any) {
 	if infoLog == nil {
 		return
 	}
@@ -21,7 +21,7 @@ func Info(v ...interface{}) {
 }
 
 // Warning log warning line
-func Warning(v ...interface{}) {
+func Warning(v ...any) {
 	if warningLog == nil {
 		return
 	}
@@ -29,7 +29,7 @@ func Warning(v ...interface{}) {
 }
 
 // Error log error line
-func Error(v ...interface{}) {
+func Error(v ...any) {
 	if errorLog == nil {
 		return
 	}
@@ -37,7 +37,7 @@ func Error(v ...interface{}) {
 }
 
 // Fatal log fatal error and terminate
-func Fatal(v ...interface{}) {
+func Fatal(v ...any) {
 	Error(v...)
 	Error("Fatal error")
 	Close()
@@ -45,7 +45,7 @@ func Fatal(v ...interface{}) {
 }
 
 // Debugf log debug line with format
-func Debugf(format string, v ...interface{}) {
+func Debugf(format string, v ...any) {
 	if debugLog == nil {
 		return
 	}
@@ -53,7 +53,7 @@ func Debugf(format string, v ...interface{}) {
 }
 
 // Infof log info line with format
-func Infof(format string, v ...interface{}) {
+func Infof(format string, v ...any) {
 	if infoLog == nil {
 		return
 	}
@@ -61,7 +61,7 @@ func Infof(format string, v ...interface{}) {
 }
 
 // Warningf log warning line with format
-func Warningf(format string, v ...interface{}) {
+func Warningf(format string, v ...any) {
 	if warningLog == nil {
 		return
 	}
@@ -69,7 +69,7 @@ func Warningf(format string, v ...interface{}) {
 }
 
 // Errorf log error line with format
-func Errorf(format string, v ...interface{}) {
+func Errorf(format string, v ...any) {
 	if errorLog == nil {
 		return
 	}
@@ -77,7 +77,7 @@ func Errorf(format string, v ...interface{}) {
 }
 
 // Fatalf log fatal error with format
-func Fatalf(format string, v ...interface{}) {
+func Fatalf(format string, v ...any) {
 	Errorf(format, v...)
 	Error("Fatal error")
 	Close()
